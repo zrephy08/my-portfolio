@@ -1,22 +1,22 @@
 <template>
     <header class="sticky top-0 z-50 bg-[#190430]">
         <nav class="flex justify-center items-center gap-5 h-16 px-[200px] text-white">
-        <div class="flex gap-9">
-            <a href="#home" @click.prevent="scrollTo('home')"
-            :class="{ 'glow-text': activeSection === 'home' }">Home</a>
-            <a href="#about" @click.prevent="scrollTo('about')"
-            :class="{ 'glow-text': activeSection === 'about' }">About</a>
-            <a href="#skills" @click.prevent="scrollTo('skills')"
-            :class="{ 'glow-text': activeSection === 'skills' }">Skills</a>
-            <a href="#projects" @click.prevent="scrollTo('projects')"
-            :class="{ 'glow-text': activeSection === 'projects' }">Projects</a>
-        </div>
+            <div class="flex gap-9 text-[20px]">
+                <a href="#home" @click.prevent="scrollTo('home')" 
+                :class="{ 'glow-text': activeSection === 'home' } ">Home</a>
+                <a href="#about" @click.prevent="scrollTo('about')" 
+                :class="{ 'glow-text': activeSection === 'about' }">About</a>
+                <a href="#skills" @click.prevent="scrollTo('skills')" 
+                :class="{ 'glow-text': activeSection === 'skills' }">Skills</a>
+                <a href="#projects" @click.prevent="scrollTo('projects')" 
+                :class="{ 'glow-text': activeSection === 'projects' }">Projects</a>
+            </div>
         </nav>
     </header>
 
-    <section id="home" class="relative bg-[url('/test2(1).jpg')] bg-cover bg-center">
+    <section id="home" class="relative bg-[url('/test2(1).jpg')] bg-cover bg-center -mt-10">
         <div id="hero-container"
-            class="relative flex justify-center items-center lg:gap-[100px] lg:py-10 lg:px-10 lg:h-[600px]
+            class="relative flex justify-center items-center lg:gap-[100px] lg:py-14 lg:px-14 lg:h-[600px]
                     md:gap-[50px] md:pt-6 md:pb-6 md:h-[500px]
                     sm:gap-[50px] sm:pt-6 sm:pb-6 sm:h-[500px]">
 
@@ -33,13 +33,13 @@
         <div class="flex flex-col">
 
             <div class="relative flex flex-col m-0 text-container opacity-0">
-                <h1 class="lg:text-[60px] md:text-[30px] sm:text-[30px] font-bold text-white leading-[1.1] glowing-text">
+                <h1 class="lg:text-[70px] md:text-[30px] sm:text-[30px] font-bold text-white leading-[1.1] glowing-text">
                 HELLO THERE! 
                 </h1>
             </div>
 
             <div class="relative flex flex-col m-0 text-container1 opacity-0">
-                <span class="block lg:text-[20px] md:text-[10px] sm:text-[10px] text-white mt-2 leading-[1]">I'm Aljubehr Sahiol, I build digital experiences</span>
+                <span class="block lg:text-[25px] md:text-[10px] sm:text-[10px] font-light text-white mt-1 leading-[1]">I'm Aljubehr Sahiol, I build digital experiences</span>
             </div>
 
         </div>
@@ -48,31 +48,37 @@
 
     <section id="about" class="flex flex-col items-center bg-gradient-to-b from-[#1a0433] to-[#280D66] pb-32 text-white">
         <!-- Centered heading -->
-        <h2 class="font-bold text-3xl md:text-2xl lg:text-4xl text-center text-white mt-16 mb-12 glowing-text">
+        <h2 class="font-bold text-5xl md:text-2xl lg:text-4xl text-center text-white mt-[120px] mb-12 glowing-text">
             ABOUT ME
         </h2>
 
         <!-- Card -->
-        <div class="bg-[#7c17e8] max-w-5xl lg:p-16 md:p-10 sm:p-12 sm:m-5 text-center text-white rounded-2xl">
-            <div class="flex items-center gap-6">
-            <p class="lg:text-lg md:text-md sm:text-sm flex-1 text-justify">
+        <div class="bg-gradient-to-br from-[#7c17e8] to-[#9131fd] max-w-5xl rounded-2xl flex flex-col md:flex-row items-center md:items-center lg:p-16 md:p-10 sm:p-12 sm:m-5 gap-0 md:gap-6">
+
+            <!-- Left text -->
+            <p class="flex-1 text-justify order-2 md:order-1 lg:text-lg md:text-md sm:text-sm ">
                 Hi, I’m Aljubehr Banguis Sahiol. I create digital experiences that people enjoy, whether it’s 
                 building websites and apps, designing clean interfaces, or sharing ideas through videos. I’m passionate about 
                 turning concepts into real, usable solutions that make life easier or more enjoyable.
             </p>
 
-            <img src="/logo12.png" alt="My Photo" class="sm:h-[150px] sm:w-[150px] md:h-[150px] md:w-[150px] lg:h-[300px] lg:w-[300px] rounded-xl">
+            <!-- Image (center on md/lg, top on sm) -->
+            <img src="/test3.png" alt="My Photo" 
+                class="rounded-xl order-1 md:order-2 sm:h-[150px] sm:w-[150px] md:h-[150px] md:w-[150px] lg:h-[300px] lg:w-[300px]">
 
-            <p class="lg:text-lg md:text-md sm:text-sm flex-1 text-justify">
+            <!-- Right text -->
+            <p class="flex-1 text-justify order-3 lg:text-lg md:text-md sm:text-sm">
                 I love exploring new technologies, experimenting with creative formats, and finding ways to combine functionality 
                 and creativity in everything I do. I’m always looking for new challenges that help me grow and improve my skills.
             </p>
-            </div>
+
         </div>
     </section>
 
-    <section id="skills" class="pt-40 pb-40 bg-[#280D66] flex justify-center">
-        <div class="max-w-6xl w-full px-6 text-white">
+    <section id="skills" class="bg-[#280D66] h-screen max-h-[600px] flex justify-center items-center">
+        <div class="w-full h-3/4 flex justify-center items-center
+            bg-gradient-to-br from-[#7c17e8] to-[#9131fd]">
+        <div class="max-w-6xl w-full px-6 pb-[60px] text-[#581de2]">
 
         <!-- Title -->
         <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 glowing-text">
@@ -80,48 +86,49 @@
         </h2>
 
         <!-- Skills Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
 
-            <div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
-                <img src="/test-html.jpeg" alt="HTML" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <span class="z-10 text-lg font-semibold transition-all duration-300 group-hover:text-white">
+            <div class="relative group w-full h-40 bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <img src="/test-html.jpeg" alt="HTML" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <span class="z-10 text-xl font-bold transition-all duration-500 group-hover:text-white">
                     HTML
                 </span>
             </div>
 
-            <div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
-                <img src="/test-css.jpeg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <span class="z-10 text-lg font-semibold transition-all duration-300 group-hover:text-white">
+            <div class="relative group w-full h-40 bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <img src="/test-css.jpeg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <span class="z-10 text-xl font-bold transition-all duration-500 group-hover:text-white">
                     CSS
                 </span>
             </div>
 
-            <div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
-                <img src="/test-javas.jpg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <span class="z-10 text-lg font-semibold transition-all duration-300 group-hover:text-white">
+            <div class="relative group w-full h-40 bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <img src="/test-javas.jpg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <span class="z-10 text-xl font-bold transition-all duration-500 group-hover:text-white">
                     JAVASCRIPT
                 </span>
             </div>
 
-            <div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
-                <img src="/test-php.jpeg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <span class="z-10 text-lg font-semibold transition-all duration-300 group-hover:text-white">
+            <div class="relative group w-full h-40 bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <img src="/test-php.jpeg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <span class="z-10 text-xl font-bold transition-all duration-500 group-hover:text-white">
                     PHP
                 </span>
             </div>
 
-            <div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
+            <!--<div class="relative group w-full h-40 bg-[#7c16e9] rounded-2xl overflow-hidden flex items-center justify-center">
                 <img src="/test-videdi.jpg" alt="CSS" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                 <div class="absolute inset-0 bg-[#0c0217]/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <span class="z-10 text-lg font-semibold transition-all duration-300 group-hover:text-white">
                     VIDEO EDITING
                 </span>
-            </div>
+            </div>-->
 
+        </div>
         </div>
         </div>
     </section>
@@ -133,7 +140,7 @@
         </h2>
 
         <!-- Projects Container -->
-        <div class="max-w-7xl w-full px-[100px] grid md:grid-cols lg:grid-cols-2 gap-10">
+        <div class="max-w-7xl w-full px-[100px] grid md:grid-cols lg:grid-cols-3 gap-10">
 
             <!-- Project Card -->
             <div class="group relative rounded-xl overflow-hidden shadow-lg">
@@ -225,7 +232,7 @@
                 </div>
             </div>
 
-                    <!-- Project Card -->
+                    <!-- Project Card 
             <div class="group relative rounded-xl overflow-hidden shadow-lg">
                 
                 <img 
@@ -233,7 +240,7 @@
                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                <!-- Overlay -->
+                 Overlay 
                 <div class="absolute inset-0 bg-[#0c0217]/80 backdrop-blur-lg opacity-0 
                             group-hover:opacity-100 transition duration-500 
                             flex flex-col justify-center items-center text-center p-6">
@@ -253,8 +260,8 @@
                 </div>
 
                 </div>
-            </div>
-
+            </div>-->
+            
         </div>
 
     </section>
@@ -403,5 +410,23 @@ onUnmounted(() => {
         text-shadow: 0 0 12px #a35cf0, 0 0 16px #a35cf0;
         color: #ffffff;
         transition: text-shadow ease;
+    }
+
+    h1 {
+        font-family: 'Jersey 25';
+    }
+    h2 {
+        font-family: 'Jersey 25';
+        font-size: 50px;
+    }
+    p {
+        font-family: 'Jersey 25';
+        font-size: 20px;
+    }
+    a {
+        font-family: 'Jersey 25';
+    }
+    span {
+        font-family: 'Jersey 25';
     }
 </style>
